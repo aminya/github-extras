@@ -7,7 +7,7 @@ import regexJoin from 'regex-join';
 import SizePlugin from 'size-plugin';
 import decamelize from 'decamelize';
 import TerserPlugin from 'terser-webpack-plugin';
-// @ts-expect-error
+// @ts-ignore
 import {ESBuildPlugin} from 'esbuild-loader';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -125,7 +125,7 @@ const config: Configuration = {
 			),
 
 			__filebasename: webpack.DefinePlugin.runtimeValue(
-				// @ts-expect-error
+				// @ts-ignore
 				info => JSON.stringify(path.parse(info.module.resource).name)
 			)
 		}),
