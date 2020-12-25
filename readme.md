@@ -1,9 +1,18 @@
-# <img src="distribution/icon.png" width="45" align="left"> Refined GitHub
+# <img src="distribution/icon.png" width="45" align="left"> GitHub Extras
 
 [link-cws]: https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf "Version published on Chrome Web Store"
 [link-amo]: https://addons.mozilla.org/en-US/firefox/addon/refined-github-/ "Version published on Mozilla Add-ons"
 
-> Browser extension that simplifies the GitHub interface and adds useful features
+> Browser extension that adds many useful features to GitHub!
+
+## A fork of Refined-GitHub with the GitHub's feature removers/hiders disabled by default and higher performance
+
+This fork disables the features that remove/hide something from GitHub by default. So this extension is less opinionated, and it only focuses on the features that add something to GitHub.
+
+This fork has a higher performance because of less opinionated default options and the higher compiler optimizations.
+
+### Original Refined GitHub Readme:
+
 
 We use GitHub a lot and notice many annoyances we'd like to fix. So here be dragons.
 
