@@ -156,10 +156,9 @@ const config: Configuration = {
 				parallel: true,
 				exclude: 'browser-polyfill.min.js', // #3451
 				terserOptions: {
-					mangle: false,
+					mangle: true,
 					output: {
-						beautify: true,
-						indent_level: 2
+						beautify: false,
 					}
 				}
 			})
