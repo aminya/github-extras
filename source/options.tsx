@@ -10,9 +10,14 @@ import * as indentTextarea from 'indent-textarea';
 
 import {perDomainOptions} from './options-storage';
 
+import {isFeatureRemover} from './options-defaults'
+
 function moveDisabledFeaturesToTop(): void {
 	const container = select('.js-features')!;
 	for (const unchecked of select.all('.feature [type=checkbox]:not(:checked)', container).reverse()) {
+		if (isFeatureRemover(unchecked.getAttribute("name")!.substring(8))) {
+			continue
+		}
 		// .reverse() needed to preserve alphabetical order while prepending
 		container.prepend(unchecked.closest('.feature')!);
 	}
