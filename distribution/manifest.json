@@ -1,8 +1,8 @@
 {
-	"name": "Refined GitHub",
+	"name": "GitHub Extras",
 	"version": "0.0.0",
-	"description": "Simplifies the GitHub interface and adds useful features",
-	"homepage_url": "https://github.com/sindresorhus/refined-github",
+	"description": "Browser extension that adds many useful features to GitHub!",
+	"homepage_url": "https://github.com/aminya/github-extras",
 	"manifest_version": 2,
 	"minimum_chrome_version": "80",
 	"applications": {
