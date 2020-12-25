@@ -16,6 +16,7 @@ function moveDisabledFeaturesToTop(): void {
 	const container = select('.js-features')!;
 	for (const unchecked of select.all('.feature [type=checkbox]:not(:checked)', container).reverse()) {
 		if (isFeatureRemover(unchecked.getAttribute("name")!.substring(8))) {
+			unchecked.parentElement!.classList.add('feature-remover');
 			continue
 		}
 		// .reverse() needed to preserve alphabetical order while prepending
