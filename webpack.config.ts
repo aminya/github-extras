@@ -14,6 +14,8 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack, {Configuration} from 'webpack';
 import {parse as parseMarkdown} from 'markdown-wasm/dist/markdown.node';
 
+import {isDisabledByDefault} from './source/options-defaults';
+
 let isWatching = false;
 
 function parseFeatureDetails(readmeContent: string, id: FeatureID): FeatureMeta {
@@ -112,7 +114,7 @@ const config: Configuration = {
 		new webpack.DefinePlugin({
 			// Passing `true` as the second argument makes these values dynamic — so every file change will update their value.
 			__featuresOptionDefaults__: webpack.DefinePlugin.runtimeValue(
-				() => JSON.stringify(Object.fromEntries(getFeatures().map(id => [`feature:${id}`, true]))),
+				() => JSON.stringify(Object.fromEntries(getFeatures().map(id => [`feature:${id}`, !isDisabledByDefault(id)]))),
 				true
 			),
 
