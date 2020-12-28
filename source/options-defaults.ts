@@ -26,6 +26,7 @@ export const featureRemovers = [
   "cleanup-repo-filelist-actions",
   "clean-conversation-headers",
   "new-repo-disable-projects-and-wikis",
+  "more-dropdown"
 ]
 
 export const otherDisabledFeatures = [
